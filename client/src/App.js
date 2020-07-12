@@ -47,7 +47,7 @@ export default class App extends React.Component {
   render(){
     const { data } = this.state;
     const headerTitles = [
-      "Open Price",
+      "Open Price ",
       "High Price",
       "Low Price",
       "Current Price",
