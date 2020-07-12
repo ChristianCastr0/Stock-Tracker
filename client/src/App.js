@@ -46,6 +46,15 @@ export default class App extends React.Component {
 
   render(){
     const { data } = this.state;
+    const headerTitles = [
+      "Open Price ",
+      "High Price",
+      "Low Price",
+      "Current Price",
+      "Previous Close Price",
+      "Time"
+    ];
+
 
     return (
       <div className="App">
@@ -65,12 +74,9 @@ export default class App extends React.Component {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Open Price</TableCell>
-                  <TableCell>High Price</TableCell>
-                  <TableCell>Low Price</TableCell>
-                  <TableCell>Current Price</TableCell>
-                  <TableCell>Previoud Close Price</TableCell>
-                  <TableCell>Time</TableCell>
+                  {
+                    headerTitles.map((title, i) => (<TableCell key={i}>{title}</TableCell>))
+                  }
                 </TableRow>
               </TableHead>
               <TableBody>
